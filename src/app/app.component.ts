@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component,  OnInit, Output,EventEmitter, } from '@angular/core';
+import { ProductData } from './models/product-data';
 
 @Component({
   selector: 'app-root',
@@ -8,12 +9,17 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'humber-assignment-1';
   showModal = false;
-
+  
   onCardClick() {
     this.showModal = true;
   }
-
+  
   closeModal() {
     this.showModal = false;
   }
+
+  enterText(event: KeyboardEvent){
+    console.log(event.key);
+  }
+
 }
